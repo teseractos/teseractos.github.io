@@ -1,0 +1,80 @@
+@header-bg: white;
+@logo-text: white;
+@radius: 4px;
+@section-head-color: rgb(95, 143, 185);
+@footer-bg: black;
+@footer-text: white;
+
+.shadow(@size: 5px) {
+    -webkit-box-shadow: 0px 0px 20px @size rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 20px @size rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 20px @size rgba(0,0,0,0.75);
+}
+
+.container, .container-fluid {
+    max-width: none !important;
+    width: 970px;
+}
+
+body {
+	background: fixed url("../img/grey_wash_wall.png");
+}
+
+#header {
+    background: @header-bg;
+    position: relative;
+    .shadow;
+    
+    h1 {
+        margin: 10px 0;
+        font-size: 28px;
+    }
+}
+
+#logo-panel {
+	background: fixed url("../img/black_grundge_seamless_tile1.jpg");
+	color: @logo-text;
+    margin-bottom: 20px;
+    .shadow;
+    
+    h1 {
+        font-size: 50px;
+        padding-top: 30px;
+    }
+    
+    .img-responsive {
+        margin: 0 auto;
+    }
+}
+
+#content {
+	.row {
+		margin-top: 10px;
+       
+        .thumbnail {
+            height: 540px;
+        
+            h2 {
+                border-bottom: 1px dotted;
+                color: @section-head-color;
+                font-size: 25px;
+                text-align: center;
+            }
+            
+            p {
+                font-size: 16px;
+                line-height: 1.8;
+                margin-bottom: 20px;
+            }
+            
+            .shadow;
+        }
+    }
+}
+
+#footer {
+	background: @footer-bg;
+	color: @footer-text;
+	margin-top: 20px;
+	padding: 10px;
+}
